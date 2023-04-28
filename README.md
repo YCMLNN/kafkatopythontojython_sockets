@@ -28,8 +28,8 @@ To run this project, you will need:
 
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/Kafka-Python-Jython-Bridge.git
-cd Kafka-Python-Jython-Bridge
+git clone https://github.com/YCMLNN/kafkatopythontojython_sockets.git
+cd kafkatopythontojython_sockets
 ```
 
 
@@ -37,21 +37,9 @@ cd Kafka-Python-Jython-Bridge
 
 3. Replace the `kafka_topic` and `kafka_bootstrap_servers` variables in `pyMain.py` with your Kafka topic name and broker's address.
 
-4. Open two terminal windows.
+4. Run the code of pyMain.py file in a Python environment.
 
-5. In the first terminal, navigate to the repository directory and run the Jython script:
-
-```
-jython jyMain.py
-```
-
-If the connection to the Python script fails, update the `port` variable in `jyMain.py` with the `assigned_port` value printed by the Python script.
-
-6. In the second terminal, navigate to the repository directory and run the Python script:
-
-```
-python pyMain.py
-```
+6. Run the code of jyMain.py in a Jython environment (or in the case of a utilization with Ignition, in the scripting environment of Ignition). If the connection to the Python script fails, update the `port` variable in `jyMain.py` with the `assigned_port` value printed by the Python script.
 
 7. Send messages to the Kafka topic using a Kafka producer. The Python script will consume the messages, serialize them as JSON, and send them to the Jython script over a socket connection. The Jython script will print the received messages to the console.
 
